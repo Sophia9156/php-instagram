@@ -1,0 +1,584 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Nanum+Gothic:wght@400;700&display=swap");
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+image {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+}
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@-webkit-keyframes ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.title {
+  width: 100%;
+  position: fixed;
+  left: 15%;
+  top: 200px;
+  -webkit-animation: ani 1s forwards linear;
+          animation: ani 1s forwards linear;
+}
+
+.title img {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.title h1 {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 70px;
+  color: white;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+
+.mainBtnWrap {
+  position: fixed;
+  left: 20%;
+  top: 500px;
+}
+
+.mainBtnWrap .mainBtn {
+  display: block;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.mainBtnWrap:hover .mainBtn {
+  border: 3px solid white;
+  color: white;
+}
+
+.switchViewType {
+  position: fixed;
+  right: 8%;
+  top: 100px;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.switchViewType .list {
+  display: none;
+}
+
+.postWrap {
+  position: absolute;
+  right: 15%;
+  padding: 100px 0;
+  width: 40%;
+}
+
+.postWrap ul li {
+  width: 600px;
+  height: 700px;
+  margin: 30px auto;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.postWrap ul li .bigContainer {
+  position: relative;
+}
+
+.postWrap ul li .bigContainer .container {
+  width: 100%;
+  height: 500px;
+  margin: 0px auto;
+  border: 25px solid #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.postWrap ul li .bigContainer .container .slideWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.postWrap ul li .bigContainer .container .slideWrap .slide {
+  width: 600px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postWrap ul li .bigContainer .container .slideWrap .slide img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.postWrap ul li .bigContainer .pagination {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.postWrap ul li .bigContainer .pagination span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #eee;
+  margin: 0 5px;
+}
+
+.postWrap ul li .bigContainer .pagination span.active {
+  background-color: #666;
+}
+
+.postWrap ul li .bigContainer .prevBtn, .postWrap ul li .bigContainer .nextBtn {
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.postWrap ul li .bigContainer .prevBtn span, .postWrap ul li .bigContainer .nextBtn span {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+.postWrap ul li .bigContainer .prevBtn {
+  left: -15px;
+}
+
+.postWrap ul li .bigContainer .prevBtn span {
+  border-top: 1px solid #444;
+  border-left: 1px solid #444;
+  -webkit-transform: rotate(-45deg) translate(2px, 2px);
+          transform: rotate(-45deg) translate(2px, 2px);
+}
+
+.postWrap ul li .bigContainer .nextBtn {
+  right: -15px;
+}
+
+.postWrap ul li .bigContainer .nextBtn span {
+  border-bottom: 1px solid #444;
+  border-right: 1px solid #444;
+  -webkit-transform: rotate(-45deg) translate(-2px, -2px);
+          transform: rotate(-45deg) translate(-2px, -2px);
+}
+
+.postWrap ul li .textField {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 20px;
+  position: relative;
+}
+
+.postWrap ul li .textField figure {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 30px;
+  border: 2px solid #ddd;
+}
+
+.postWrap ul li .textField figure img {
+  max-width: 150%;
+  max-height: 150%;
+}
+
+.postWrap ul li .textField .text {
+  width: 380px;
+  margin-right: 50px;
+}
+
+.postWrap ul li .textField .text .nickname {
+  font-size: 14px;
+  color: #888;
+  margin: 20px 0;
+}
+
+.postWrap ul li .textField .text .content {
+  font-size: 16px;
+  color: #444;
+}
+
+.postWrap ul li .textField .button {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+}
+
+.postWrap ul li .textField .button .showBtn {
+  font-size: 40px;
+  color: #eee;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.postWrap ul li .textField .button .showBtn .plusBtn {
+  display: inline;
+}
+
+.postWrap ul li .textField .button .showBtn .plusBtn.inactive {
+  display: none;
+}
+
+.postWrap ul li .textField .button .showBtn .minusBtn {
+  display: none;
+}
+
+.postWrap ul li .textField .button .showBtn .minusBtn.active {
+  display: inline;
+}
+
+.postWrap ul li .textField .button .showBtn:hover {
+  color: #444;
+}
+
+.postWrap ul li .textField .button .flyBtn.active {
+  opacity: 1;
+}
+
+.postWrap ul li .textField .button .flyBtn {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  opacity: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.postWrap ul li .textField .button .flyBtn a {
+  display: block;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #eee;
+  border: 2px solid #aaa;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #444;
+  font-weight: 600;
+  text-align: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.postWrap ul li .textField .button .flyBtn a:hover {
+  border: 2px solid #888;
+  color: #222;
+}
+
+.postWrap ul.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.postWrap ul.grid li {
+  width: 30%;
+  height: 35vh;
+  margin: 30px auto;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.postWrap ul.grid li .bigContainer {
+  position: relative;
+}
+
+.postWrap ul.grid li .bigContainer .container {
+  width: 100%;
+  height: 25vh;
+  margin: 0px auto;
+  border: 15px solid #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postWrap ul.grid li .bigContainer .container .slideWrap .slide {
+  width: 100%;
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postWrap ul.grid li .bigContainer .container .slideWrap .slide img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.postWrap ul.grid li .bigContainer .pagination {
+  display: none;
+}
+
+.postWrap ul.grid li .bigContainer .prevBtn, .postWrap ul.grid li .bigContainer .nextBtn {
+  display: none;
+}
+
+.postWrap ul.grid li .textField {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 20px;
+  position: relative;
+}
+
+.postWrap ul.grid li .textField figure {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 10px 25px 0;
+  border: 2px solid #ddd;
+}
+
+.postWrap ul.grid li .textField figure img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.postWrap ul.grid li .textField .text {
+  width: 120px;
+  margin-right: 30px;
+}
+
+.postWrap ul.grid li .textField .text .nickname {
+  font-size: 12px;
+  color: #888;
+  margin: 15px 0 10px;
+}
+
+.postWrap ul.grid li .textField .text .content {
+  font-size: 14px;
+  color: #444;
+}
+
+.postWrap ul.grid li .textField .button {
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
+.postWrap ul.grid li .textField .button .showBtn {
+  font-size: 30px;
+  color: #eee;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.postWrap ul.grid li .textField .button .showBtn .plusBtn {
+  display: inline;
+}
+
+.postWrap ul.grid li .textField .button .showBtn .plusBtn.inactive {
+  display: none;
+}
+
+.postWrap ul.grid li .textField .button .showBtn .minusBtn {
+  display: none;
+}
+
+.postWrap ul.grid li .textField .button .showBtn .minusBtn.active {
+  display: inline;
+}
+
+.postWrap ul.grid li .textField .button .showBtn:hover {
+  color: #444;
+}
+
+.postWrap ul.grid li .textField .button .flyBtn.active {
+  opacity: 1;
+}
+
+.postWrap ul.grid li .textField .button .flyBtn {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  opacity: 0;
+  z-index: 10;
+}
+
+.postWrap ul.grid li .textField .button .flyBtn a {
+  display: block;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #eee;
+  border: 2px solid #aaa;
+  margin: 5px 0;
+  font-size: 12px;
+  color: #444;
+  font-weight: 600;
+  text-align: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.postWrap ul.grid li .textField .button .flyBtn a:hover {
+  border: 2px solid #888;
+  color: #222;
+}
+/*# sourceMappingURL=main.css.map */

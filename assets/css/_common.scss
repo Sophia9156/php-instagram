@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Nanum+Gothic:wght@400;700&display=swap');
+// font-family: 'Covered By Your Grace', cursive;
+// font-family: 'Nanum Gothic', sans-serif;
+
+
+body{margin: 0;}
+h1,h2,h3,h4,h5,h6,p,figure{margin: 0;}
+*{box-sizing: border-box; font-family: 'Nanum Gothic', sans-serif;}
+a{text-decoration: none;}
+ul,li{list-style-type: none; padding: 0; margin: 0;}
+image{vertical-align: middle;}
+table{border-collapse: collapse;}
+
+.material-icons-outlined{font-family: 'Material Icons';}
+
+
+body{
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@keyframes ani {
+  0%{opacity: 0; transform: translateY(50px);}
+  100%{opacity: 1; transform: translateY(0px);}
+}
+.title{
+  width: 100%;
+  position: fixed;
+  left: 15%; top: 200px;
+  animation: ani 1s forwards linear;
+  img{
+    width: 100px;
+    position: absolute;
+    left: 0; top: 0;
+  }
+  h1{
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 50px; top: 10px;
+  }
+}
+.mainBtnWrap{
+  position: fixed;
+  left: 20%; top: 500px;
+  .mainBtn{
+    display: block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 3px solid rgba(255,255,255,0.5);
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 40px;
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    transition: .4s;
+  }
+  &:hover{
+    .mainBtn{
+      border: 3px solid rgba(255,255,255,1);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
